@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -29,6 +30,8 @@ export function Navigation() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        
+        {/* Logo */}
         <Link
           href="/"
           className="font-serif text-xl font-bold tracking-wide text-foreground transition-colors duration-300 hover:text-primary"
@@ -39,15 +42,18 @@ export function Navigation() {
         {/* Desktop Nav */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="group relative text-sm font-medium tracking-wide text-muted-foreground uppercase transition-colors duration-300 hover:text-foreground"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
+
+          <ThemeToggle />
+
           <Link
             href="/contact"
             className="rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-medium text-primary transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-primary-foreground hover:shadow-lg hover:shadow-primary/25 active:scale-95"
@@ -89,7 +95,7 @@ export function Navigation() {
         >
           <div className="flex h-full flex-col items-center justify-center gap-8">
             {navLinks.map((link, i) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
@@ -97,8 +103,11 @@ export function Navigation() {
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
+
+            <ThemeToggle />
+
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
@@ -108,6 +117,7 @@ export function Navigation() {
             </Link>
           </div>
         </div>
+
       </div>
     </nav>
   );

@@ -40,6 +40,45 @@
   --sidebar-ring: #34d399;
 }
 
+
+
+/* ───── LIGHT THEME (default) ───── */
+.light {
+  --background: #f4f9f6;
+  --foreground: #0a1a12;
+  --card: #ffffff;
+  --card-foreground: #0a1a12;
+  --popover: #ffffff;
+  --popover-foreground: #0a1a12;
+  --primary: #059669;
+  --primary-foreground: #ffffff;
+  --secondary: #e6f2ec;
+  --secondary-foreground: #0d3320;
+  --muted: #e6f2ec;
+  --muted-foreground: #4a7a5e;
+  --accent: #b8860b;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #fff1f1;
+  --border: #c5ddd1;
+  --input: #c5ddd1;
+  --ring: #059669;
+  --chart-1: #059669;
+  --chart-2: #b8860b;
+  --chart-3: #0d9488;
+  --chart-4: #7c3aed;
+  --chart-5: #ea580c;
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0a1a12;
+  --sidebar-primary: #059669;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e6f2ec;
+  --sidebar-accent-foreground: #0a1a12;
+  --sidebar-border: #c5ddd1;
+  --sidebar-ring: #059669;
+}
+
 @theme inline {
   --font-sans: var(--font-inter), 'Inter', sans-serif;
   --font-serif: var(--font-playfair), 'Playfair Display', 'Georgia', serif;
